@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anirudh Chaudhari - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    p.subtitle {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .about-section, .skills-section, .projects-section, .education-section, .experience-section, .contact-section {
+      background: #fff;
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .project-item, .experience-item {
+      margin-bottom: 30px;
+    }
+
+    .more-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #image-viewer {
+      display: none; /* Initially hide the image viewer */
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #image-viewer img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Anirudh Chaudhari</h1>
+      <p class="subtitle">3rd Year B.Tech CSE Student | Aspiring AI/ML Engineer</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi, I'm Anirudh Chaudhari, a 3rd-year B.Tech Computer Science student specializing in Artificial Intelligence and Machine Learning. I am passionate about solving complex problems through innovative tech solutions and gaining hands-on experience in AI/ML development.</p>
+      <button onclick="showImage()">Show Resume</button>
+      <div id="image-viewer">
+        <img id="resume-image" src="" alt="Resume Image"> <!-- src is initially empty -->
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <p>Here are some of my technical skills:</p>
+      <ul>
+        <li>Programming Languages: C, C++, Python, R</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>AI/ML Tools: OpenCV, YOLOv5, TensorFlow, scikit-learn</li>
+        <li>Software & Technologies: Git, Anaconda, Jupyter Notebooks</li>
+        <li>Operating Systems: Linux, Windows</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <h3>AI-Based Traffic Control System</h3>
+        <p>A real-time AI-powered system to optimize traffic light control using YOLOv5 and Arduino.</p>
+        <button onclick="toggleInfo('project1')">Show More</button>
+        <div class="more-info" id="project1">
+          <p>Details: Developed an AI model using Python and OpenCV for real-time traffic optimization, integrating Arduino with ESP8266 for signal control.</p>
+        </div>
+      </div>
+      <div class="project-item">
+        <h3>Grocery Delivery App</h3>
+        <p>An intuitive mobile app designed for grocery delivery with efficient route optimization and user-friendly UI.</p>
+        <button onclick="toggleInfo('project2')">Show More</button>
+        <div class="more-info" id="project2">
+          <p>Details: Implemented back-end logic using Python and Flask, created an intuitive user interface with HTML, CSS, and JavaScript, and integrated mapping APIs for delivery route optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education-section">
+    <div class="container">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology (B.Tech), Computer Science Engineering</strong></p>
+      <p>GH Raisoni University, Sausar, Madhya Pradesh</p>
+      <p>Expected Graduation: 2025</p>
+      <p><strong>Relevant Coursework:</strong></p>
+      <ul>
+        <li>Artificial Intelligence</li>
+        <li>Machine Learning</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Web Development</li>
+        <li>Database Management Systems</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Internship (AI/ML) - Google Company</h3>
+        <p>Summer 2023, City, Madhya Pradesh</p>
+        <ul>
+          <li>Assisted in the development of a machine learning model for customer behavior prediction.</li>
+          <li>Collaborated with a team to build data pipelines for training and testing models.</li>
+        </ul>
+        <button onclick="toggleInfo('experience1')">Show More</button>
+        <div class="more-info" id="experience1">
+          <p>Additional Details: Worked on data preprocessing, feature selection, and model evaluation using various machine learning techniques.</p>
+        </div>
+      </div>
+      <div class="experience-item">
+        <h3>Freelance Web Developer</h3>
+        <p>Self-Employed (2022 - Present)</p>
+        <ul>
+          <li>Built responsive websites and web applications for small businesses using HTML, CSS, and JavaScript.</li>
+          <li>Optimized user interfaces for performance and accessibility.</li>
+        </ul>
+        <button onclick="toggleInfo('experience2')">Show More</button>
+        <div class="more-info" id="experience2">
+          <p>Additional Details: Focused on creating user-friendly designs and ensuring compatibility across different browsers and devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me through the following channels:</p>
+      <ul>
+        <li>Email: <a href="mailto:anirudhchaudhari@example.com">anirudhchaudhari@example.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/anirudhchaudhari" target="_blank">linkedin.com/in/anirudhchaudhari</a></li>
+        <li>GitHub: <a href="https://github.com/anirudhchaudhari" target="_blank">github.com/anirudhchaudhari</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Anirudh Chaudhari. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleInfo(id) {
+      const info = document.getElementById(id);
+      info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+
+    function showImage() {
+      const imageViewer = document.getElementById("image-viewer");
+      const resumeImage = document.getElementById("resume-image");
+      resumeImage.src = 'Anirudh1resume.png'; // Update this path according to your project structure
+      imageViewer.style.display = "block"; // Show the image viewer
+    }
+  </script>
+</body>
+</html>
+
